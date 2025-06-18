@@ -1,5 +1,6 @@
 package com.example.weplan
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -36,5 +37,11 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "이메일과 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.btnToSignUp.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
